@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>KodNest Premium Build System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <div class="top-bar__project">KodNest Premium Build System</div>
+      <div class="top-bar__progress">Step 2 / 5</div>
+      <div class="top-bar__status">In Progress</div>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+      <div class="content-inner">
+        <!-- Context Header -->
+        <section class="context-header">
+          <h1>Define Your Current Build Step</h1>
+          <p>Clarify what should be produced in this step so every run remains predictable and reviewable.</p>
+        </section>
+
+        <!-- Primary Workspace + Secondary Panel -->
+        <section class="layout">
+          <!-- Primary Workspace (70%) -->
+          <div>
+            <article class="card">
+              <h2 class="card__title">Workspace Overview</h2>
+              <div class="card__body">
+                Use this area to capture the concrete outcome for this step. Keep it specific and testable.
+              </div>
+
+              <div class="field">
+                <label for="step-outcome">Step outcome</label>
+                <textarea id="step-outcome" placeholder="Example: A responsive settings page matching the KodNest layout, wired to mock data."></textarea>
+                <div class="field__helper">
+                  Describe the UI and logic this step is responsible for, in one or two sentences.
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="constraints">Constraints</label>
+                <textarea id="constraints" placeholder="Example: No third-party UI kits; reuse KodNest components only."></textarea>
+                <div class="field__helper">Note any guardrails that must not be violated.</div>
+              </div>
+            </article>
+
+            <article class="card">
+              <h2 class="card__title">Acceptance Criteria</h2>
+              <div class="field">
+                <label for="criteria">Criteria list</label>
+                <textarea id="criteria" placeholder="- Layout matches the design system
+- Primary actions use deep red primary button
+- Proof footer checkboxes can be updated"></textarea>
+                <div class="field__helper">
+                  Capture how you will verify that this step is complete.
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Secondary Panel (30%) -->
+          <aside class="card">
+            <h3 class="panel-title">Step guidance</h3>
+            <p class="panel-text">
+              Confirm what this build step is responsible for. Keep scope narrow, avoid speculative features, and write in concrete terms.
+            </p>
+
+            <div class="prompt-box">
+Define the exact UI and logic for this step.
+Avoid new patterns; follow the KodNest layout:
+[Top Bar] → [Context Header] → [Primary Workspace + Secondary Panel] → [Proof Footer].
+Use the deep red primary button for main actions only.
+            </div>
+
+            <div class="button-row">
+              <button class="btn btn--primary">Copy</button>
+              <button class="btn btn--primary">Build in Lovable</button>
+            </div>
+
+            <div class="button-row">
+              <button class="btn btn--success">It Worked</button>
+              <button class="btn btn--warning">Error</button>
+              <button class="btn btn--secondary">Add Screenshot</button>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </main>
+
+    <!-- Proof Footer -->
+    <footer class="proof-footer">
+      <div class="proof-footer-inner">
+        <div>
+          <h4 class="proof-footer__title">Proof of completion</h4>
+          <p class="proof-footer__subtitle">
+            Each checklist item requires evidence. Add a short note or link so future reviews stay objective.
+          </p>
+        </div>
+        <div class="proof-list">
+          <div class="proof-item">
+            <div class="checkbox"></div>
+            <div>
+              <div class="proof-label">UI Built</div>
+              <textarea class="proof-input" placeholder="Link or describe the final UI for this step."></textarea>
+            </div>
+          </div>
+
+          <div class="proof-item">
+            <div class="checkbox"></div>
+            <div>
+              <div class="proof-label">Logic Working</div>
+              <textarea class="proof-input" placeholder="Note how you verified the logic (flows, edge cases)."></textarea>
+            </div>
+          </div>
+
+          <div class="proof-item">
+            <div class="checkbox checkbox--checked"></div>
+            <div>
+              <div class="proof-label">Test Passed</div>
+              <textarea class="proof-input" placeholder="Link to test results or describe your manual checks."></textarea>
+            </div>
+          </div>
+
+          <div class="proof-item">
+            <div class="checkbox"></div>
+            <div>
+              <div class="proof-label">Deployed</div>
+              <textarea class="proof-input" placeholder="Environment, build ID, or deployment URL."></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
